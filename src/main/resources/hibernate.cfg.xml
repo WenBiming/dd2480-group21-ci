@@ -7,9 +7,12 @@
     <session-factory>
         <!-- MySQL Connection -->
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://${MYSQLHOST}:${MYSQLPORT}/${DB_NAME}?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
-        <property name="hibernate.connection.username">${MYSQLUSER}</property>
-        <property name="hibernate.connection.password">${MYSQL_ROOT_PASSWORD}</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+        </property>
+
+        <property name="hibernate.connection.username">${DB_USER}</property>
+        <property name="hibernate.connection.password">${DB_PASS}</property>
 
         <!-- Hibernate Dialect -->
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>

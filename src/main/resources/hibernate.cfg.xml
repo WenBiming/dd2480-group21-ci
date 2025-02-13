@@ -10,7 +10,7 @@
 
         <!-- ✅ Correct MySQL Connection URL -->
         <property name="hibernate.connection.url">
-            ${URL}
+            jdbc:${URL}
         </property>
 
         <!-- ✅ Use 'root' as the username (not 'railway') -->
